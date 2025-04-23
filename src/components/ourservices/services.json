@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Training & Workshops",
+    "image": "image1.png",
+    "description": "We aim to build smart, user-friendly solutions that empower businesses and individuals to thrive in the digital age. Our commitment is to deliver excellence through continuous learning collaboration, and a strong focus on user experience. We believe in creating impact designs and opportunities across various real-world applications."
+  },
+  {
+    "id": 2,
+    "title": "Consulting",
+    "image": "/images/consulting.jpg",
+    "description": "Expert consulting services to help your business navigate digital transformation and optimize operations."
+  },
+  {
+    "id": 3,
+    "title": "Development",
+    "image": "/images/development.jpg",
+    "description": "Custom software development tailored to your specific business needs and requirements."
+  }
+]

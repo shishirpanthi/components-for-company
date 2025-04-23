@@ -1,0 +1,173 @@
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    background-color: white;
+    /* Changed to white */
+    border-radius: 0px 20px 20px 0px;
+    padding: 15px 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #FF8000;
+    /* Orange accent on the left */
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid #FF8000;
+    /* Orange border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper:hover {
+    transform: translateX(5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.icon {
+    z-index: 1;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover gradients with smoother transition */
+.facebook:hover {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+    border-color: #3b5998;
+}
+
+.linkedin:hover {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+    border-color: #0077B5;
+}
+
+.instagram:hover {
+    background: linear-gradient(135deg, #feda75, #d62976, #962fbf);
+    border-color: #d62976;
+}
+
+.whatsapp:hover {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border-color: #25d366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 12px 8px;
+        border-left-width: 4px;
+    }
+
+    .iconWrapper {
+        width: 40px;
+        height: 40px;
+        border-radius: 15px;
+    }
+
+}
+
+/* Animation for sidebar entrance */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%) translateY(-50%);
+    }
+
+    to {
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+
+/* .sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    background-color: #FF8000;
+    border-radius: 0px 20px 20px 0px;
+    padding: 10px;
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+  
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    left: 0px;
+}
+
+.iconWrapper:hover {
+    left: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    color: #ffffff;
+    
+}
+
+.icon {
+    z-index: 1;
+    font-size: 20px;
+    transition: font-size 0.3s ease;
+}
+
+
+.facebook:hover {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+}
+
+.linkedin:hover {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+}
+
+.instagram:hover {
+    background: linear-gradient(135deg, #feda75, #d62976, #962fbf);
+}
+
+.whatsapp:hover {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+
+@media (max-width: 768px) {
+    .iconWrapper {
+        width: 40px;
+        height: 40px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+} */
