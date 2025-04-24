@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.testimonialSection {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff5e6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    color: #FF8000;
+}
+
+.heading::before,
+.heading::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #FF8000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.heading::before {
+    left: -60px;
+}
+
+.heading::after {
+    right: -60px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonialWrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonialContainer {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.testimonialCard {
+    background-color: #fff;
+    border: 2px solid #FF8000;
+    border-radius: 10px;
+    padding: 25px 30px;
+    width: 250px;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.testimonialCard:hover {
+    box-shadow: 0 10px 20px rgba(255, 128, 0, 0.2);
+    animation: marquee 3s linear infinite;
+    /* Simplified marquee animation */
+}
+
+.testimonialCard:hover:hover {
+    animation-play-state: paused;
+}
+
+.testimonialImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FF8000;
+}
+
+.paragraph {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.readMoreButton {
+    background-color: transparent;
+    color: #FF8000;
+    border: 1px solid #FF8000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.readMoreButton:hover {
+    background-color: #FF8000;
+    color: #fff;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.starFilled {
+    color: #FF8000;
+    font-size: 18px;
+}
+
+.starEmpty {
+    color: #ccc;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(15px, -10px);
+    }
+
+    /* Move right and up */
+    50% {
+        transform: translate(0, 0);
+    }
+
+    /* Back to center */
+    75% {
+        transform: translate(-15px, -10px);
+    }
+
+    /* Move left and up */
+    100% {
+        transform: translate(0, 0);
+    }
+
+    /* Back to center */
+}
