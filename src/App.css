@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF8000;
+    --secondary-color: #FFB300;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -16,7 +34,8 @@ html {
         /* Adjust font size for mobile screens */
     }
 }
-h1{
+
+h1 {
     font-size: 3.4rem;
     width: 100%;
     /* height: 200vh; */

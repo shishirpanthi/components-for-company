@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import SocialSidebar from './components/sidebaricon/SocialSidebar'
 import Services from './components/ourservices/Services'
+import JoinUs from './components/joinus/JoinUs'
+import InternshipJoin from './components/joinus/For intership/InternshipJoin'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,8 @@ function App() {
     <>
       <SocialSidebar />
       <Services />
-      <h1>hello</h1>
+      <JoinUs />
+      <InternshipJoin />
       
     </>
   )
