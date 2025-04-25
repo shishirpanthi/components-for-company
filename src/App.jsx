@@ -15,8 +15,8 @@ function App() {
     <>
       <SocialSidebar />
       <Services />
-      <JoinUs />
-      <InternshipJoin />
+      {/* <JoinUs />
+      <InternshipJoin /> */}
       <Testimonial />
       
     </>
