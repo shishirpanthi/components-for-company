@@ -1,9 +1,43 @@
 /* Base styles with orange theme */
 .services {
     padding: 5rem 2rem;
-    background: #FF8000;
+    /* background: #FF8000; */
     /* background: #fef8f2; */
     /* Light orange tint background */
+}
+
+/* Header styles */
+.headerImage {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.headerTitle {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #FF8000;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.titleLine {
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.headerSubtitle {
+    padding: 10px;;
+    /* display: flex;
+    justify-content: center; */
+    /* max-width: 238px; */
+    font-size: 1.8rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
 }
 
 .servicesContainer {
@@ -157,9 +191,9 @@
     transform: perspective(1000px) rotateX(10deg);
 }
 
-.serviceCard:hover .imageOverlay {
-    opacity: 1;
-}
+/* .serviceCard:hover .imageOverlay {
+    /* opacity: 1; */
+
 
 .serviceCard:hover .serviceImage {
     transform: scale(1.1);
@@ -293,5 +327,13 @@
 
     .serviceCard {
         animation-delay: 0s !important;
+    }
+
+    .headerTitle {
+        font-size: 1.8rem;
+    }
+
+    .headerSubtitle {
+        font-size: 1rem;
     }
 }

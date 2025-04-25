@@ -1,0 +1,66 @@
+.container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #FF8000;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    font-family: poppins, sans-serif;
+}
+
+.heading::before,
+.heading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #ff6200;
+}
+
+.heading::before {
+    left: -60px;
+}
+
+.heading::after {
+    right: -60px;
+}
+
+.description {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-family: poppins, sans-serif;
+}
+
+.clientGrid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.clientCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 128, 0, 0.3), 0 6px 20px rgba(255, 128, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.clientCard:hover {
+    transform: translateY(-5px);
+}
+
+.clientLogo {
+    max-width: 120px;
+    height: auto;
+}

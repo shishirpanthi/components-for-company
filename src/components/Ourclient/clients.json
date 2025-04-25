@@ -1,0 +1,9 @@
+{
+  "clients": [
+    { "id": 1, "name": "kunda-lini", "imgSrc": "kunda-lini.png" },
+    { "id": 2, "name": "client-2", "imgSrc": "client-2.png" },
+    { "id": 3, "name": "cloth-food-bank", "imgSrc": "cloth-food-bank.png" },
+    { "id": 4, "name": "butwal-ed", "imgSrc": "butwal-ed.png" },
+    { "id": 5, "name": "buddha-fiber", "imgSrc": "buddha-fiber.png" }
+  ]
+}
