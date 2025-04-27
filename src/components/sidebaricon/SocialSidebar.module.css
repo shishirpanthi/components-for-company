@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 10px;
     z-index: 999;
-    background-color: white;
+    background-color: transparent;
     /* Changed to white */
     border-radius: 0px 20px 20px 0px;
     padding: 15px 10px;

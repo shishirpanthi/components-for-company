@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "FaCheckCircle",
+    "count": 500,
+    "label": "Project Completed"
+  },
+  {
+    "id": 2,
+    "icon": "FaUsers",
+    "count": 500,
+    "label": "Happy Clients"
+  },
+  {
+    "id": 3,
+    "icon": "FaSyncAlt",
+    "count": 500,
+    "label": "Repeat Client"
+  },
+  {
+    "id": 4,
+    "icon": "FaUserTie",
+    "count": 500,
+    "label": "Smart Solution"
+  }
+]

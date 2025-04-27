@@ -1,9 +1,68 @@
 {
   "clients": [
-    { "id": 1, "name": "kunda-lini", "imgSrc": "kunda-lini.png" },
-    { "id": 2, "name": "client-2", "imgSrc": "client-2.png" },
-    { "id": 3, "name": "cloth-food-bank", "imgSrc": "cloth-food-bank.png" },
-    { "id": 4, "name": "butwal-ed", "imgSrc": "butwal-ed.png" },
-    { "id": 5, "name": "buddha-fiber", "imgSrc": "buddha-fiber.png" }
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/1 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/3 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/4 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/5.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/6 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/7.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/8 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/9.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/10 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/11.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/12 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/13 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/14 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/15 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/16 1.png"
+    },
+    {
+      "id": 1,
+        "imgSrc": "/img/Logos of clients/17.png"
+    }
   ]
 }

@@ -6,7 +6,7 @@
 }
 
 .heading {
-    font-size: 2.4rem;
+    font-size: 4rem;
     font-weight: 700;
     color: #FF8000;
     margin-bottom: 10px;
@@ -22,7 +22,7 @@
     top: 50%;
     width: 50px;
     height: 2px;
-    background-color: #ff6200;
+    background-color: black;
 }
 
 .heading::before {
@@ -34,7 +34,7 @@
 }
 
 .description {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #333;
     margin-bottom: 30px;
     line-height: 1.5;
@@ -49,18 +49,78 @@
 }
 
 .clientCard {
+    /* max-width: 200px; */
+    /* max-height: 150px;
+    overflow: hidden; */
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 128, 0, 0.3), 0 6px 20px rgba(255, 128, 0, 0.2);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: transform 0.2s ease;
 }
 
 .clientCard:hover {
     transform: translateY(-5px);
+    box-shadow: 4px 4px 0px #FF8000, 6px 6px 20px #FF8000;
 }
 
 .clientLogo {
     max-width: 120px;
     height: auto;
+}
+
+/* ...existing code... */
+
+/* Media query for small screens (mobile devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .clientGrid {
+        gap: 10px;
+    }
+
+    .clientCard {
+        padding: 8px;
+    }
+
+    .clientLogo {
+        max-width: 100px;
+    }
+}
+
+/* Media query for medium screens (tablets) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.6rem;
+    }
+
+    .clientGrid {
+        gap: 15px;
+    }
+
+    .clientCard {
+        padding: 9px;
+    }
+
+    .clientLogo {
+        max-width: 110px;
+    }
 }

@@ -8,6 +8,8 @@ import JoinUs from './components/joinus/JoinUs'
 import InternshipJoin from './components/joinus/For intership/InternshipJoin'
 import Testimonial from './components/Testonomial/Testimonial'
 import Ourclient from './components/Ourclient/Ourclient'
+import HappyClient from './components/Happyclient/HappyClient'
+import ContactUs from './components/contactUs/ContactUs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,14 +18,14 @@ function App() {
     <>
       <SocialSidebar />
       <Services />
+      <HappyClient />
       <Ourclient />
       {/* <JoinUs />
       <InternshipJoin /> */}
       <Testimonial />
-
-      
+      <ContactUs />
     </>
-  )
+  );
 }
 
 export default App
