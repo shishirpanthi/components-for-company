@@ -2,10 +2,9 @@
 
 .testimonialSection {
     text-align: center;
-    padding: 40px 200px;
+    padding: 40px 150px;
     background-color: #fff5e6;
     font-family: 'Poppins', sans-serif;
-
 }
 
 .heading {
@@ -14,8 +13,8 @@
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
-    color: #FF8000;
-    font-family: poppins, sans-serif;
+    color: #ff8000;
+    font-family: 'Poppins', sans-serif;
 }
 
 .heading::before,
@@ -48,29 +47,47 @@
 }
 
 .testimonialWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    /* width: 100%; */
 }
 
 .testimonialContainer {
+    width: max-content;
+    /* Ensures all cards are visible in a single row */
     display: flex;
     gap: 20px;
-    width: max-content;
+    padding: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    overflow-y: hidden;
+}
 
+.testimonialContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonialContainer.animate {
+    animation: marquee 5s linear infinite;
+}
+
+.testimonialContainer:hover {
+    animation-play-state: paused;
 }
 
 .testimonialCard {
     background-color: #fff;
-    border: 2px solid #FF8000;
+    border: 2px solid #ff8000;
     border-radius: 10px;
     padding: 10px 20px;
     max-width: 250px;
-    /* max-height: 300px; */
     text-align: center;
     flex-shrink: 0;
-    position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    animation: marquee 10s linear infinite;
 }
 
 .testimonialImage {
@@ -84,10 +101,10 @@
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #FF8000;
+    color: #ff8000;
 }
 
-.paragraph {
+.testimonialText {
     font-size: 1.4rem;
     color: #666;
     margin-bottom: 15px;
@@ -97,8 +114,8 @@
 
 .readMoreButton {
     background-color: transparent;
-    color: #FF8000;
-    border: 1px solid #FF8000;
+    color: #ff8000;
+    border: 1px solid #ff8000;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -109,7 +126,7 @@
 }
 
 .readMoreButton:hover {
-    background-color: #FF8000;
+    background-color: #ff8000;
     color: #fff;
 }
 
@@ -120,7 +137,7 @@
 }
 
 .starFilled {
-    color: #FF8000;
+    color: #ff8000;
     font-size: 1.87rem;
 }
 
@@ -129,38 +146,46 @@
     font-size: 1.8rem;
 }
 
-.horizontalScroll {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 10px;
-    /* Optional: Adds space for scrollbar */
+.arrowButton {
+    background: #ff8000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background 0.3s;
 }
 
-.testimonialContainer {
-    display: inline-flex;
-    /* Ensures cards are displayed in a row */
-    gap: 16px;
-    /* Adds spacing between cards */
+.arrowButton:hover {
+    background: #e67000;
 }
 
-.testimonialCard {
-    display: inline-block;
-    /* Ensures cards respect horizontal scrolling */
-    width: 300px;
-    /* Adjust card width as needed */
+.arrowButton:first-child {
+    left: 10px;
+}
+
+.arrowButton:last-child {
+    right: 10px;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-10%);
+        /* Adjusted for 5x data */
     }
 }
-
-/* ...existing code... */
 
 /* Responsive styles */
 @media (max-width: 1024px) {
@@ -171,12 +196,17 @@
     .heading::before,
     .heading::after {
         width: 30px;
+    }
+
+    .heading::before {
         left: -40px;
+    }
+
+    .heading::after {
         right: -40px;
     }
 
     .subheading {
-        /* font-size: 14px; */
         padding: 0 20px;
     }
 
@@ -190,68 +220,50 @@
         max-height: 95px;
     }
 
-
     .readMoreButton {
-        /* font-size: 12px; */
         padding: 5px 8px;
     }
 }
 
 @media (max-width: 768px) {
-
-    .heading::before,
-    .heading::after {
-        width: 30px;
-        /* Reduced width */
-        height: 1px;
-        /* Optional: Adjust height if needed */
-    }
-
-    .heading::before {
-        left: -35px;
-        /* Adjust left position */
-    }
-
-    .heading::after {
-        right: -35px;
-        /* Adjust right position */
-    }
-
     .testimonialSection {
         padding: 10px 15px;
     }
 
+    .heading::before,
+    .heading::after {
+        width: 30px;
+        height: 1px;
+    }
+
+    .heading::before {
+        left: -35px;
+    }
+
+    .heading::after {
+        right: -35px;
+    }
+
     .testimonialContainer {
-        flex-direction: row;
-        align-items: center;
         gap: 5px;
     }
 
     .testimonialCard {
         margin-bottom: 20px;
         max-width: 240px;
-        max-height: 320px;
     }
 
+    .testimonialContainer.animate {
+        animation: none;
+        /* Disable marquee on small screens for better UX */
+    }
 }
 
 @media (max-width: 480px) {
 
-
     .heading::before,
     .heading::after {
         display: none;
-
-    }
-
-    .heading::before {
-        left: -25px;
-        /* Adjust left position */
-    }
-
-    .heading::after {
-        right: -25px;
-        /* Adjust right position */
     }
 
     .testimonialCard {
@@ -266,5 +278,3 @@
         margin-bottom: 10px;
     }
 }
-
-/* ...existing code... */
