@@ -336,6 +336,12 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+    .heading::before,
+    .heading::after{
+        display: none;
+
+    } 
     .services {
         padding: 3rem 1.5rem;
     }

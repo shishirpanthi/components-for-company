@@ -87,7 +87,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 15px;
     /* Remove conflicting height styles if any */
 }
 
@@ -97,7 +97,7 @@
     padding: 10px;
     border: 2px solid #ff6200;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .textarea {
@@ -112,7 +112,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .button:hover {
@@ -121,12 +121,12 @@
 
 .mapContainer {
     flex: 1;
-    height: 400px;
+    /* height: 400px; */
 }
 
 .mapPlaceholder {
     width: 100%;
-    height: 90%;
+    height: 100%;
     background: #f0f0f0;
     display: flex;
     align-items: center;
@@ -161,7 +161,7 @@
     background: linear-gradient(45deg, #ff6200, #ff8c00);
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.6rem;
     /* Adjusted for better icon fit */
     transition: background 0.3s ease;
 }
@@ -209,6 +209,13 @@
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+
+    .heading::before,
+    .heading::after {
+        display: none;
+
+    }
+
     .container {
         padding: 20px 10px;
     }
@@ -217,10 +224,11 @@
         font-size: 3rem;
     }
 
-    .infoItem{
+    .infoItem {
         flex-direction: row;
 
-    } 
+    }
+
     .subtitle {
         font-size: 1.5rem;
     }
@@ -246,23 +254,17 @@
     .socialIcon {
         width: 35px;
         height: 35px;
-        font-size: 16px;
+        /* font-size: 16px; */
     }
 }
 
 @media (max-width: 480px) {
-    .heading {
-        font-size: 2.5rem;
-    }
 
-    .subtitle {
-        font-size: 1.2rem;
-    }
 
     .socialIcon {
         width: 30px;
         height: 30px;
-        font-size: 14px;
+
     }
 }
 

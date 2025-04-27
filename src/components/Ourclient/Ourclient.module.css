@@ -73,6 +73,12 @@
 
 /* Media query for small screens (mobile devices) */
 @media (max-width: 768px) {
+
+    .heading::before,
+    .heading::after{
+        display: none;
+
+    } 
     .container {
         padding: 20px 10px;
     }

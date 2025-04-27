@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./Testimonial.module.css";
-
-// Importing JSON data
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Importing icons
 import testimonialData from "./testimonials.json";
 
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [expanded, setExpanded] = useState({});
+  const containerRef = useRef(null); // Ref for the testimonial container
 
   useEffect(() => {
     setTestimonials(testimonialData);
@@ -19,6 +19,14 @@ const Testimonial = () => {
     }));
   };
 
+  const scrollLeft = () => {
+    containerRef.current.scrollLeft -= 300; // Adjust scroll distance as needed
+  };
+
+  const scrollRight = () => {
+    containerRef.current.scrollLeft += 300; // Adjust scroll distance as needed
+  };
+
   return (
     <div className={styles.testimonialSection}>
       <h2 className={styles.heading}>Testimonial</h2>
@@ -28,7 +36,10 @@ const Testimonial = () => {
         technology, and software solutions.
       </p>
       <div className={styles.testimonialWrapper}>
-        <div className={styles.testimonialContainer}>
+        <button className={styles.arrowButton} onClick={scrollLeft}>
+          <FaArrowLeft />
+        </button>
+        <div className={styles.testimonialContainer} ref={containerRef}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className={styles.testimonialCard}>
               <img
@@ -37,10 +48,10 @@ const Testimonial = () => {
                 className={styles.testimonialImage}
               />
               <h3 className={styles.name}>{testimonial.name}</h3>
-              <p className={styles.paragraph}>
+              <p className={styles.testimonialText}>
                 {expanded[index] || testimonial.paragraph.length <= 80
-                  ? testimonial.paragraph
-                  : `${testimonial.paragraph.substring(0, 80)}...`}
+                  ? `"${testimonial.paragraph}"`
+                  : `"${testimonial.paragraph.substring(0, 80)}..."`}
               </p>
               {testimonial.paragraph.length > 80 && (
                 <button
@@ -67,6 +78,9 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
+        <button className={styles.arrowButton} onClick={scrollRight}>
+          <FaArrowRight />
+        </button>
       </div>
     </div>
   );

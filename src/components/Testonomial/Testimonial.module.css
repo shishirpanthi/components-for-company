@@ -129,6 +129,26 @@
     font-size: 1.8rem;
 }
 
+.horizontalScroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    /* Optional: Adds space for scrollbar */
+}
+
+.testimonialContainer {
+    display: inline-flex;
+    /* Ensures cards are displayed in a row */
+    gap: 16px;
+    /* Adds spacing between cards */
+}
+
+.testimonialCard {
+    display: inline-block;
+    /* Ensures cards respect horizontal scrolling */
+    width: 300px;
+    /* Adjust card width as needed */
+}
 
 @keyframes marquee {
     0% {
@@ -178,6 +198,25 @@
 }
 
 @media (max-width: 768px) {
+
+    .heading::before,
+    .heading::after {
+        width: 30px;
+        /* Reduced width */
+        height: 1px;
+        /* Optional: Adjust height if needed */
+    }
+
+    .heading::before {
+        left: -35px;
+        /* Adjust left position */
+    }
+
+    .heading::after {
+        right: -35px;
+        /* Adjust right position */
+    }
+
     .testimonialSection {
         padding: 10px 15px;
     }
@@ -198,6 +237,23 @@
 
 @media (max-width: 480px) {
 
+
+    .heading::before,
+    .heading::after {
+        display: none;
+
+    }
+
+    .heading::before {
+        left: -25px;
+        /* Adjust left position */
+    }
+
+    .heading::after {
+        right: -25px;
+        /* Adjust right position */
+    }
+
     .testimonialCard {
         padding: 10px;
     }
@@ -206,7 +262,7 @@
         padding: 6px;
     }
 
-    .name{
+    .name {
         margin-bottom: 10px;
     }
 }
