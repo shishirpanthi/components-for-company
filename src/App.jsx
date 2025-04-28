@@ -11,6 +11,7 @@ import Ourclient from './components/Ourclient/Ourclient'
 import HappyClient from './components/Happyclient/HappyClient'
 import ContactUs from './components/contactUs/ContactUs'
 import OurTeam from './components/Ourteam/OurTeam'
+import ServicesAnimation from './components/Circularservice/ServicesAnimation'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
     <>
       <SocialSidebar />
       <Services />
+      <ServicesAnimation />
       <HappyClient />
       <Ourclient />
       {/* <JoinUs />
