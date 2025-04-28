@@ -15,6 +15,7 @@
     /* Increased to accommodate larger gaps */
     height: 700px;
     padding: 10px 20px;
+
 }
 
 .ring {
@@ -79,9 +80,9 @@
 
 .icon {
     position: absolute;
-    width: 4rem;
+    width: 5rem;
     /* Reduced size to prevent overlap */
-    height: 4rem;
+    height: 5rem;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 

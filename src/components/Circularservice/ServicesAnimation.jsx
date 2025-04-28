@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ServicesAnimation.module.css";
 import servicesAnimationData from "./servicesAnimationData.json";
+import Rightsideservices from "./leftsideservices/Rightsideservices";
 
 const ServicesAnimation = () => {
   const [services, setServices] = useState([]);
@@ -18,38 +19,41 @@ const ServicesAnimation = () => {
   const ringRadii = [110, 150, 190]; // Adjusted for three rings
 
   return (
-    <div className={styles.container}>
-      <div className={styles.ringContainer}>
-        {/* Each ring contains two icons */}
-        {services.map((servicePair, ringIndex) => (
-          <div
-            key={`ring-${ringIndex}`}
-            className={`${styles.ring} ${styles[`ring${ringIndex + 1}`]}`} // Dynamic ring class
-          >
-            {servicePair.map((service, index) => (
-              <div
-                key={service.id}
-                className={styles.icon}
-                style={{
-                  transform: `rotate(${
-                    (index * 180) / servicePair.length
-                  }deg) translate(${ringRadii[ringIndex]}px) rotate(-${
-                    (index * 180) / servicePair.length
-                  }deg)`,
-                }}
-              >
-                <img src={service.icon} alt={`Service ${service.id}`} />
-              </div>
-            ))}
-          </div>
-        ))}
+    <>
+      <Rightsideservices/>
+      <div className={styles.container}>
+        <div className={styles.ringContainer}>
+          {/* Each ring contains two icons */}
+          {services.map((servicePair, ringIndex) => (
+            <div
+              key={`ring-${ringIndex}`}
+              className={`${styles.ring} ${styles[`ring${ringIndex + 1}`]}`} // Dynamic ring class
+            >
+              {servicePair.map((service, index) => (
+                <div
+                  key={service.id}
+                  className={styles.icon}
+                  style={{
+                    transform: `rotate(${
+                      (index * 180) / servicePair.length
+                    }deg) translate(${ringRadii[ringIndex]}px) rotate(-${
+                      (index * 180) / servicePair.length
+                    }deg)`,
+                  }}
+                >
+                  <img src={service.icon} alt={`Service ${service.id}`} />
+                </div>
+              ))}
+            </div>
+          ))}
 
-        {/* Center Icon */}
-        <div className={styles.centerIcon}>
-          <img src="/img/tech.png" alt="Center Icon" />
+          {/* Center Icon */}
+          <div className={styles.centerIcon}>
+            <img src="/img/tech.png" alt="Center Icon" />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
