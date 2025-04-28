@@ -1,0 +1,85 @@
+{
+  "teamMembers": [
+    {
+      "name": "Mr. Arjun Pathak",
+      "position": "CEO/Founder",
+      "imgSrc": "/img/ourteam/ceo.png",
+      "description": "SomarJun Tech Company began with a passionate team and a strong vision to empower businesses and individuals through innovative solutions. Despite early challenges, the company grew by delivering quality digital products and services. We focus on innovation, learning, and achieving, supporting creative minds with the right resources and opportunities. By encouraging risk-taking, we believe we are driving greater success. As the Founder and CEO, I am proud of our journey so far and remain committed to technology, growth, and making a positive impact.",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/arjunpathak",
+        "instagram": "https://instagram.com/arjunpathak",
+        "facebook": "https://facebook.com/arjunpathak"
+      }
+    },
+    {
+      "name": "Hemanta Thapa",
+      "position": "Web Developer",
+      "imgSrc": "/img/ourteam/img1.png",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/hemantathapa",
+        "instagram": "https://instagram.com/hemantathapa",
+        "facebook": "https://facebook.com/hemantathapa"
+      }
+    },
+    {
+      "name": "Shishir Ponthi",
+      "position": "Web Developer",
+      "imgSrc": "/img/ourteam/ccr1.png",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/shishirponthi",
+        "instagram": "https://instagram.com/shishirponthi",
+        "facebook": "https://facebook.com/shishirponthi"
+      }
+    },
+    {
+      "name": "Sumit Khonal",
+      "position": "Graphics Designer",
+      "imgSrc": "path/to/sumit-khonal.jpg",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/sumitkhonal",
+        "instagram": "https://instagram.com/sumitkhonal",
+        "facebook": "https://facebook.com/sumitkhonal"
+      }
+    },
+    {
+      "name": "Krishala Aryal",
+      "position": "Graphics Designer",
+      "imgSrc": "path/to/krishala-aryal.jpg",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/krishalaaryal",
+        "instagram": "https://instagram.com/krishalaaryal",
+        "facebook": "https://facebook.com/krishalaaryal"
+      }
+    },
+    {
+      "name": "A. Arjun Pathak",
+      "position": "Web Developer",
+      "imgSrc": "path/to/a-arjun-pathak1.jpg",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/aarjunpathak1",
+        "instagram": "https://instagram.com/aarjunpathak1",
+        "facebook": "https://facebook.com/aarjunpathak1"
+      }
+    },
+    {
+      "name": "A. Arjun Pathak",
+      "position": "Web Developer",
+      "imgSrc": "path/to/a-arjun-pathak2.jpg",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/aarjunpathak2",
+        "instagram": "https://instagram.com/aarjunpathak2",
+        "facebook": "https://facebook.com/aarjunpathak2"
+      }
+    },
+    {
+      "name": "A. Arjun Pathak",
+      "position": "Web Developer",
+      "imgSrc": "path/to/a-arjun-pathak3.jpg",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/in/aarjunpathak3",
+        "instagram": "https://instagram.com/aarjunpathak3",
+        "facebook": "https://facebook.com/aarjunpathak3"
+      }
+    }
+  ]
+}

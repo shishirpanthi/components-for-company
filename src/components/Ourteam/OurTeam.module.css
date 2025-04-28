@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.teamSection {
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    font-size: 4rem;
+    color: #ff8000;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::before,
+.title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #ff8000;
+}
+
+.title::before {
+    left: -60px;
+}
+
+.title::after {
+    right: -60px;
+}
+
+.subtitle {
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 40px;
+    /* max-width: 800px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teamCard {
+    perspective: 1000px;
+    height: 300px;
+}
+
+.founderCard {
+    grid-column: span 2;
+    height: 450px;
+}
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border: 2px solid #ff8000; */
+    border-radius: 10px;
+}
+
+.teamCard:hover .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cardFront {
+    background-color: #fff;
+}
+
+.cardBack {
+    margin: auto;
+    background-color: #ff8000;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.cardBack .memberName {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cardBack .memberRole {
+    margin: 0;
+    font-size: 1.8rem;
+
+}
+
+
+.founderCard .memberImage {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 15px;
+}
+
+.memberImage {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff8000;
+    margin-bottom: 15px;
+}
+
+.memberName {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.memberRole {
+    font-size: 1.8rem;
+
+}
+
+.description {
+    color: black;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+}
+
+.icon {
+    font-size: 3.2rem;
+    /* Adjust the size of the icons */
+    color: white;
+    border-radius: 50%;
+    /* Make the icons circular */
+    padding: 5px;
+    /* Add padding for better spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Specific styles for each social media icon */
+.icon.linkedin {
+    background: linear-gradient(45deg, #0077b5, #005582);
+    /* LinkedIn gradient */
+}
+
+.icon.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    /* Instagram gradient */
+}
+
+.icon.facebook {
+    background: linear-gradient(45deg, #1877f2, #0d47a1);
+    /* Facebook gradient */
+}
+
+/* Hover effects for each icon */
+.icon.linkedin:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the icon on hover */
+    box-shadow: 0 6px 10px rgba(0, 119, 181, 0.5);
+    /* Enhance shadow with LinkedIn color */
+}
+
+.icon.instagram:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(245, 133, 41, 0.5);
+    /* Enhance shadow with Instagram color */
+}
+
+.icon.facebook:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(24, 119, 242, 0.5);
+    /* Enhance shadow with Facebook color */
+}
+
+@media (max-width: 768px) {
+    .founderCard {
+        grid-column: span 1;
+    }
+
+    .founderCard .memberImage {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 15px;
+    }
+
+
+    .teamCard {
+        height: 250px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .title::before,
+    .title::after {
+        display: none;
+    }
+}

@@ -10,6 +10,7 @@ import Testimonial from './components/Testonomial/Testimonial'
 import Ourclient from './components/Ourclient/Ourclient'
 import HappyClient from './components/Happyclient/HappyClient'
 import ContactUs from './components/contactUs/ContactUs'
+import OurTeam from './components/Ourteam/OurTeam'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
       <InternshipJoin /> */}
       <Testimonial />
       <ContactUs />
+      <OurTeam />
     </>
   );
 }
