@@ -30,7 +30,7 @@ const ContactUs = () => {
         </div>
         <div className={styles.infoItem}>
           <FaMapMarkerAlt className={styles.icon} />
-          <span>Tilotttama-3,Shankarnagar(Rupandehi)</span>
+          <span>Tilotttama-3,Shankarnagar<br/>(Rupandehi)</span>
         </div>
       </div>
 
