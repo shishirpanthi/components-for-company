@@ -7,38 +7,47 @@ const ServicesAnimation = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    // Group services into pairs for each ring
-    const groupedServices = [];
+    // Ensure each ring contains exactly two items
+    const rings = [];
     for (let i = 0; i < servicesAnimationData.length; i += 2) {
-      groupedServices.push(servicesAnimationData.slice(i, i + 2));
+      rings.push(servicesAnimationData.slice(i, i + 2));
     }
-    setServices(groupedServices);
+
+    // If there are less than 3 rings, fill with empty arrays
+    while (rings.length < 3) {
+      rings.push([]);
+    }
+
+    setServices(rings);
   }, []);
 
-  // Adjusted radii for better spacing between rings
-  const ringRadii = [110, 150, 190]; // Adjusted for three rings
+  // Adjusted radii for proper spacing
+  const ringRadii = [200, 300, 400]; // Radii for the three rings
 
   return (
     <>
-      <Rightsideservices/>
+      <Rightsideservices />
       <div className={styles.container}>
         <div className={styles.ringContainer}>
-          {/* Each ring contains two icons */}
-          {services.map((servicePair, ringIndex) => (
+          {/* Render each ring */}
+          {services.map((serviceRing, ringIndex) => (
             <div
               key={`ring-${ringIndex}`}
               className={`${styles.ring} ${styles[`ring${ringIndex + 1}`]}`} // Dynamic ring class
             >
-              {servicePair.map((service, index) => (
+              {serviceRing.map((service, index) => (
                 <div
                   key={service.id}
                   className={styles.icon}
                   style={{
-                    transform: `rotate(${
-                      (index * 180) / servicePair.length
-                    }deg) translate(${ringRadii[ringIndex]}px) rotate(-${
-                      (index * 180) / servicePair.length
-                    }deg)`,
+                    transform:
+                      ringIndex === 1
+                        ? `rotate(${index * 180}deg) translate(${
+                            ringRadii[ringIndex]
+                          }px)` // Opposite directions for second ring
+                        : `rotate(${
+                            (index * 360) / serviceRing.length
+                          }deg) translate(${ringRadii[ringIndex]}px)`,
                   }}
                 >
                   <img src={service.icon} alt={`Service ${service.id}`} />

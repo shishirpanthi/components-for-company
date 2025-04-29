@@ -20,6 +20,7 @@ function App() {
     <>
       <SocialSidebar />
       <Services />
+      {/* <WhoWeAre /> */}
       <ServicesAnimation />
       <HappyClient />
       <Ourclient />

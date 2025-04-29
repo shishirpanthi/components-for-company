@@ -1,27 +1,32 @@
 [
   {
     "id": 1,
-    "icon": "/img/Logos of clients/14 1.png",
+    "icon": "/img/ring/icons1.png",
     "angle": 0
   },
   {
     "id": 2,
-    "icon": "/img/Logos of clients/14 1.png",
+    "icon": "/img/ring/icons2.png",
     "angle": 72
   },
   {
     "id": 3,
-    "icon": "/img/Logos of clients/14 1.png",
+    "icon": "/img/ring/icons3.png",
     "angle": 144
   },
   {
     "id": 4,
-    "icon": "/img/Logos of clients/14 1.png",
+    "icon": "/img/ring/icons4.png",
     "angle": 216
   },
   {
     "id": 5,
-    "icon": "/img/Logos of clients/14 1.png",
+    "icon": "/img/ring/icons5.png",
     "angle": 288
+  },
+  {
+    "id": 6,
+    "icon": "/img/ring/icons6.png",
+    "angle": 316
   }
 ]
