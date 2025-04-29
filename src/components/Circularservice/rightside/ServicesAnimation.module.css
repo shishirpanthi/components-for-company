@@ -1,28 +1,34 @@
 .container {
-    height: 100vh;
+    width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 20px;
-    background-color: #f9f9f9;
+    padding: 10px;
     overflow: hidden;
+    /* background-color: red; */
+}
+
+.ringContainerwrapper {
+    background-color: red;
+
 }
 
 .ringContainer {
-    position: relative;
     width: 100%;
-    max-width: 1000px;
-    height: 100%;
-    max-height: 1000px;
-    padding: 30px 20px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    background-color: green;
 }
 
 .ring {
+    margin: auto;
     padding: 10px 20px;
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 2px dashed #ccc;
+    border: 2px dashed #000;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: rotate 20s linear infinite;
@@ -30,28 +36,30 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 2px 2px #ff8000;
 }
 
 .ring:hover {
     border-color: #ff8000;
-    /* Highlight border on hover */
     transform: scale(1.05);
-    /* Slight scaling effect */
 }
 
 .ring1 {
+    padding: 10px 20px;
     width: 400px;
     height: 400px;
     animation-duration: 15s;
 }
 
 .ring2 {
+    padding: 10px 20px;
     width: 600px;
     height: 600px;
     animation-duration: 12s;
 }
 
 .ring3 {
+    padding: 10px 20px;
     width: 800px;
     height: 800px;
     animation-duration: 20s;
@@ -96,13 +104,13 @@
     z-index: 10;
     border-radius: 50%;
     background-color: #fff;
+    border: 1px solid #ff8000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .centerIcon:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* transform: scale(1.00); */
     cursor: pointer;
 }
 
@@ -118,33 +126,119 @@
     transform: scale(1.1);
 }
 
-/* Add responsiveness */
+
 @media (max-width: 768px) {
+    .ringContainer {
+        display: none;
+    }
+
+    .container {
+        width: 80vh;
+    }
+
     .ring1 {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .ring2 {
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
     }
 
     .ring3 {
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
     }
 
-    .icon {
-        width: 4rem;
-        height: 4rem;
+    .icon img {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .centerIcon {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .centerIcon img {
+        width: 90px;
+        height: 90px;
+        padding: 10px;
     }
 }
+
+/* 
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+        height: 60vh;
+        padding: 5px;
+    }
+
+    .ring1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .ring2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring3 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .icon img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .centerIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .centerIcon img {
+        width: 70px;
+        height: 70px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        height: 50vh;
+    }
+
+    .ring1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .ring2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ring3 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .centerIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .centerIcon img {
+        width: 60px;
+        height: 60px;
+        padding: 6px;
+    }
+} */
 
 /* Keyframes for rotation */
 @keyframes rotate {

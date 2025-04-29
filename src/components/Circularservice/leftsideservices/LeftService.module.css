@@ -1,0 +1,64 @@
+/* LeftService.module.css */
+.container {
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    padding: 0px 5px 0px 50px;
+    justify-content: flex-start;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.start {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff6a00;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 4rem;
+}
+
+.description {
+    width: 100%;
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.7;
+    white-space: wrap;
+    text-align: justify;
+}
+
+.line {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 2px solid #ff6a00;
+}
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 0.75rem 2rem;
+    border: 2px solid #ff6a00;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.button:hover {
+    background-color: #ff6a00;
+    color: white;
+}

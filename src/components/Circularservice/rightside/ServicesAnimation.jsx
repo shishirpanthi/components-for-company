@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ServicesAnimation.module.css";
 import servicesAnimationData from "./servicesAnimationData.json";
-import Rightsideservices from "./leftsideservices/Rightsideservices";
+
 
 const ServicesAnimation = () => {
   const [services, setServices] = useState([]);
@@ -26,7 +26,6 @@ const ServicesAnimation = () => {
 
   return (
     <>
-      <Rightsideservices />
       <div className={styles.container}>
         <div className={styles.ringContainer}>
           {/* Render each ring */}

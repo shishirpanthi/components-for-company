@@ -1,0 +1,45 @@
+.background {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Align child components side by side */
+    align-items: center;
+    /* Center items vertically */
+    padding: 30px 20px;
+    background-image: url("/img/Wave for tech.png");
+    /* Replace with your image path */
+    background-size: cover;
+    /* Ensure the image covers the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    height: 100vh;
+    /* Full viewport height */
+    box-sizing: border-box;
+    /* Include padding in height/width calculations */
+}
+
+.background>* {
+    flex: 1;
+    /* Ensure equal space for child components */
+    margin: 20px 10px;
+    /* Add spacing between child components */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .background {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        /* Stack child components vertically */
+        justify-content: center;
+        /* Center items vertically */
+        padding: 10px;
+        height: auto;
+        /* Adjust height for content */
+    }
+
+}
